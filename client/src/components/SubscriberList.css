@@ -1,0 +1,139 @@
+.subscriber-container {
+  margin: 20px auto;
+  padding: 20px;
+  max-width: 900px;
+  text-align: center;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.subscriber-header {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #2c3e50;
+  font-weight: 600;
+}
+
+.search-bar {
+  margin-bottom: 15px;
+}
+
+.search-input {
+  padding: 10px 15px;
+  width: 300px;
+  border-radius: 25px;
+  border: 1px solid #ccc;
+  transition: 0.3s;
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: #2980b9;
+  box-shadow: 0 0 8px rgba(41, 128, 185, 0.3);
+}
+
+.no-subscriber-message {
+  color: #e74c3c;
+  font-weight: bold;
+  margin-top: 5px;
+}
+
+.table-responsive {
+  overflow-x: auto;
+}
+
+.subscriber-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.subscriber-th, .subscriber-td {
+  padding: 12px;
+  border-bottom: 1px solid #ddd;
+  text-align: center;
+}
+
+.subscriber-th {
+  background: #2980b9;
+  color: white;
+  font-weight: 600;
+}
+
+.subscriber-td {
+  transition: background 0.3s;
+}
+
+.subscriber-td:hover {
+  background: #ecf0f1;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  padding: 6px 12px;
+  margin: 2px;
+  font-size: 14px;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  transition: 0.3s;
+}
+
+.btn-edit { background: #3498db; color: white; }
+.btn-edit:hover { background: #2980b9; }
+
+.btn-delete { background: #e74c3c; color: white; }
+.btn-delete:hover { background: #c0392b; }
+
+.btn-save { background: #2ecc71; color: white; }
+.btn-save:hover { background: #27ae60; }
+
+.btn-cancel { background: #95a5a6; color: white; }
+.btn-cancel:hover { background: #7f8c8d; }
+
+.export-buttons {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.export-btn {
+  padding: 8px 15px;
+  border-radius: 25px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.export-btn.pdf { background: #e74c3c; color: #fff; }
+.export-btn.pdf:hover { background: #c0392b; }
+
+.export-btn.csv { background: #27ae60; color: #fff; }
+.export-btn.csv:hover { background: #229954; }
+
+.export-btn.excel { background: #2ecc71; color: #fff; }
+.export-btn.excel:hover { background: #27ae60; }
+
+.export-btn.json { background: #3498db; color: #fff; }
+.export-btn.json:hover { background: #2980b9; }
+
+.edit-form {
+  margin-top: 20px;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background: #f8f9fa;
+}
+.edit-form input {
+  padding: 8px 12px;
+  width: 250px;
+  margin-right: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}

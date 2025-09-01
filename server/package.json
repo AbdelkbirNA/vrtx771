@@ -1,0 +1,32 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@google/genai": "^1.16.0",
+    "axios": "^1.11.0",
+    "bcryptjs": "^3.0.2",
+    "body-parser": "^2.2.0",
+    "cohere-ai": "^7.18.1",
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.1",
+    "email-validator": "^2.0.4",
+    "express": "^5.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.16.4",
+    "multer": "^2.0.2",
+    "nodemailer": "^7.0.5",
+    "openai": "^5.12.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  }
+}

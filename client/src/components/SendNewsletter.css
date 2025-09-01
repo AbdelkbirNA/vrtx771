@@ -1,0 +1,124 @@
+/* Container principal avec ombre et dégradé */
+.send-newsletter-container {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 40px;
+  background: linear-gradient(135deg, #ffffff 0%, #f7faff 100%);
+  border-radius: 20px;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+  animation: fadeInUp 0.7s ease-out;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Titre */
+.send-newsletter-title {
+  font-size: 28px;
+  font-weight: 700;
+  color: #1d3557;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+/* Formulaire */
+.send-newsletter-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Labels */
+.send-newsletter-label {
+  font-size: 16px;
+  color: #4a5568;
+  font-weight: 500;
+}
+
+/* Inputs et textarea */
+.send-newsletter-input,
+.send-newsletter-textarea {
+  width: 100%;
+  padding: 14px 16px;
+  border-radius: 12px;
+  border: 1px solid #ccc;
+  background-color: #f7fafc;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.send-newsletter-input:focus,
+.send-newsletter-textarea:focus {
+  border-color: #1d3557;
+  outline: none;
+  transform: scale(1.03);
+  box-shadow: 0 0 10px rgba(29,53,87,0.25);
+}
+
+/* Bouton Envoyer */
+.send-newsletter-button {
+  padding: 15px;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(45deg, #1d3557, #457b9d);
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.send-newsletter-button:hover {
+  background: linear-gradient(45deg, #457b9d, #a8dadc);
+  transform: translateY(-4px);
+}
+
+.send-newsletter-button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+/* Spinner */
+.icon-spin {
+  animation: spin 1s linear infinite;
+  font-size: 20px;
+}
+
+/* Messages */
+.send-newsletter-message {
+  margin-top: 20px;
+  padding: 12px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 10px;
+  text-align: center;
+  animation: fadeInScale 0.5s ease-out;
+}
+
+.send-newsletter-message.success {
+  background-color: #28a745;
+  color: white;
+}
+
+.send-newsletter-message.error {
+  background-color: #e63946;
+  color: white;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes fadeInScale {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}

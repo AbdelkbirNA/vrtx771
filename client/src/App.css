@@ -1,0 +1,104 @@
+/* Style global */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f7f7f7;  /* Gris très clair pour un fond épuré */
+  color: #333;
+}
+
+/* Container principal */
+.App {
+  text-align: center;
+  padding: 20px;
+  max-width: 100vw;
+}
+
+.App-header {
+  background: linear-gradient(135deg, #4b6cb7, #182848); /* Dégradé subtil bleu nuit */
+  color: white;
+  padding: 50px 30px;
+  border-radius: 15px; /* Coins arrondis pour un design moderne */
+  margin-bottom: 40px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); /* Ombre douce pour un effet de profondeur */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  transition: box-shadow 0.3s ease-in-out; /* Transition fluide pour l'ombre */
+}
+
+.App-header:hover {
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2); /* Ombre plus marquée au survol */
+}
+
+.App-header h1 {
+  font-size: 56px;
+  font-weight: 700;
+  margin: 0;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3); /* Ombre douce pour le titre */
+}
+
+.App-header p {
+  font-size: 22px;
+  font-weight: 400;
+  margin-top: 20px;
+  color: #ecf0f1;  /* Gris clair pour le texte secondaire */
+  line-height: 1.6;
+}
+
+nav {
+  margin: 30px 0;
+  display: flex;
+  justify-content: center;
+  gap: 40px;  /* Espacement plus large entre les boutons */
+}
+
+.nav-button {
+  font-size: 18px;
+  padding: 14px 30px;
+  text-decoration: none;
+  background: #2c3e50;  /* Bleu foncé pour un look professionnel */
+  color: white;
+  font-weight: 600;
+  border-radius: 12px;
+  text-transform: uppercase;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease, transform 0.2s ease-in-out;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.nav-button:hover {
+  background-color: #34495e;  /* Bleu un peu plus clair au survol */
+  transform: translateY(-4px); /* Légère élévation du bouton */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15); /* Ombre plus marquée au survol */
+}
+
+.nav-button:active {
+  background-color: #1f2a38;  /* Dégradé plus sombre au clic */
+  transform: translateY(0);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Ombre plus douce quand actif */
+}
+
+@media (max-width: 768px) {
+  .App-header {
+    padding: 35px 20px;
+  }
+
+  .App-header h1 {
+    font-size: 40px;
+  }
+
+  .App-header p {
+    font-size: 18px;
+  }
+
+  .nav-button {
+    font-size: 16px;
+    padding: 12px 24px;
+  }
+}

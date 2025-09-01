@@ -1,0 +1,129 @@
+/* Container principal */
+.newsletter-container {
+  max-width: 500px;
+  margin: 50px auto;
+  padding: 30px;
+  background: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  text-align: center;
+  animation: fadeInUp 0.6s ease-out;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Titres */
+.newsletter-title, .unsubscribe-title {
+  font-size: 28px;
+  font-weight: 700;
+  color: #2d3748;
+  margin-bottom: 25px;
+}
+
+/* Formulaire et labels */
+.newsletter-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.newsletter-label {
+  text-align: left;
+  font-weight: 500;
+  color: #4a5568;
+  font-size: 16px;
+}
+
+.newsletter-input,
+.newsletter-select {
+  width: 100%;
+  padding: 12px 15px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  margin-top: 5px;
+  font-size: 15px;
+  background-color: #f7fafc;
+  transition: all 0.3s ease;
+}
+
+.newsletter-input:focus,
+.newsletter-select:focus {
+  border-color: #1d3557;
+  outline: none;
+  box-shadow: 0 0 8px rgba(29,53,87,0.4);
+}
+
+/* Validation */
+.invalid {
+  border-color: #e63946 !important;
+}
+
+.newsletter-message {
+  font-weight: 600;
+  margin-top: 15px;
+  font-size: 16px;
+}
+
+.newsletter-message.success { color: #28a745; }
+.newsletter-message.error { color: #e63946; }
+
+/* Boutons */
+.newsletter-button {
+  padding: 15px;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.subscribe {
+  background-color: #1d3557;
+  color: white;
+}
+
+.subscribe:hover {
+  background-color: #457b9d;
+  transform: translateY(-3px);
+}
+
+.unsubscribe {
+  background-color: #e63946;
+  color: white;
+}
+
+.unsubscribe:hover {
+  background-color: #f06c75;
+  transform: translateY(-3px);
+}
+
+.newsletter-button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+/* Spinner */
+.icon-spin {
+  animation: spin 1s linear infinite;
+  font-size: 20px;
+}
+
+/* Animations */
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Désabonnement section */
+.unsubscribe-section {
+  margin-top: 40px;
+}

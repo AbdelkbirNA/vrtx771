@@ -1,0 +1,133 @@
+.email-history {
+  padding: 30px;
+  background-color: #f9f9fb;
+  border-radius: 15px;
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.08);
+  max-width: 1000px;
+  margin: 30px auto;
+  font-family: 'Arial', sans-serif;
+  animation: fadeInUp 0.8s ease-out;
+}
+
+.email-history h2 {
+  font-size: 2rem;
+  color: #1d3557;
+  text-align: center;
+  margin-bottom: 25px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.search-input {
+  width: 100%;
+  padding: 10px 15px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+.email-history-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 8px;
+}
+
+.email-history-table th {
+  background-color: #4b6cb7;
+  color: #fff;
+  padding: 12px;
+  font-size: 16px;
+  text-align: left;
+  font-weight: 600;
+}
+
+.email-history-table tr {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.email-history-table tr:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+}
+
+.email-history-table td {
+  padding: 12px;
+  font-size: 14px;
+  color: #333;
+  vertical-align: middle;
+}
+
+.email-status {
+  font-weight: bold;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 13px;
+  text-align: center;
+}
+
+.status-sent { background-color: #28a745; color: #fff; }
+.status-failed { background-color: #dc3545; color: #fff; }
+.status-pending { background-color: #ffc107; color: #fff; }
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 15px;
+  flex-wrap: wrap;
+}
+
+.pagination {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.pagination button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.pagination button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+.export-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.export-button {
+  background-color: #1d3557;
+  color: #fff;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.export-button:hover {
+  background-color: #4b6cb7;
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 768px) {
+  .footer-container { flex-direction: column; gap: 10px; }
+  .pagination span { font-size: 14px; }
+  .email-history-table th, .email-history-table td { font-size: 13px; padding: 10px; }
+}
