@@ -43,9 +43,13 @@ async function generateNewsletterContent(req, res) {
         contents: contents,
     });
 
-    const text = result.candidates[0].content.parts[0].text;
+    const htmlContent = result.candidates[0].content.parts[0].text;
+    const textContent = htmlContent.replace(/<[^>]*>/g, '');
 
-    res.json({ content: text });
+    res.json({
+      html: htmlContent,
+      text: textContent
+    });
   } catch (error) {
     console.error("Error generating newsletter content:", error);
     res.status(500).json({ error: "Failed to generate newsletter content" });

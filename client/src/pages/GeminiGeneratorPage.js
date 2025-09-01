@@ -10,15 +10,17 @@ const GeminiGeneratorPage = () => {
     const [isLoading, setIsLoading] = useState(false);
     const [error, setError] = useState('');
 
+    const [generatedText, setGeneratedText] = useState('');
+
     const handleSubmit = async (e) => {
         e.preventDefault();
         setIsLoading(true);
         setError('');
-        setGeneratedContent('');
+        setGeneratedText('');
 
         try {
             const response = await generateGeminiContent(topic, tone, language);
-            setGeneratedContent(response.data.content);
+            setGeneratedText(response.data.text);
         } catch (err) {
             setError('Erreur lors de la génération du contenu. Veuillez réessayer.');
             console.error(err);
@@ -68,13 +70,12 @@ const GeminiGeneratorPage = () => {
 
             {error && <p className="error-message">{error}</p>}
 
-            {generatedContent && (
+            {generatedText && (
                 <div className="generated-content-area">
                     <h3>Contenu Généré :</h3>
-                    <div className="content-preview" dangerouslySetInnerHTML={{ __html: generatedContent }}></div>
                     <textarea
                         className="content-html"
-                        value={generatedContent}
+                        value={generatedText}
                         readOnly
                     />
                 </div>
